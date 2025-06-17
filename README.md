@@ -15,3 +15,4 @@ git clone https://github.com/PranayWare/ikea-dev.git
 cd compose-node-mongo
 docker compose up -d
 
+Deployed via GitHub Actions ✅
