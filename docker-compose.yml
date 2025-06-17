@@ -1,15 +1,25 @@
+version: "3.8"
+
 services:
+  node:
+    image: node:18
+    container_name: node
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: node index.js
+    logging:
+      driver: json-file
+
   mongo:
     image: mongo
+    container_name: mongo
     volumes:
       - mongo-data:/data/db
-
-  node:
-    build: .
     ports:
-      - 3000:3000
-    depends_on:
-      - mongo
+      - "27017:27017"
 
 volumes:
   mongo-data:
