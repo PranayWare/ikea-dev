@@ -10,7 +10,7 @@ mongoose.connect('mongodb://mongo:27017/testdb', {
 });
 
 app.get('/', (req, res) => {
-  res.send('🚀 Auto-deploy via GitHub Actions!');
+  res.send('🚀 Auto-deploy CI/CD GitHub Actions!');
 });
 
 app.listen(port, () => {
