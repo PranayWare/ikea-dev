@@ -10,7 +10,7 @@ mongoose.connect('mongodb://mongo:27017/testdb', {
 });
 
 app.get('/', (req, res) => {
-  res.send('🚀 Node.js + MongoDB running in Docker Compose!');
+  res.send('🚀 CI/CD test: Hello from GitHub!');
 });
 
 app.listen(port, () => {
