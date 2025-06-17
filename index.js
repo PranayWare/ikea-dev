@@ -10,7 +10,7 @@ mongoose.connect('mongodb://mongo:27017/testdb', {
 });
 
 app.get('/', (req, res) => {
-  res.send('🚀 CI/CD test: Hello from GitHub!');
+  res.send('🚀  CI/CD is working! Hello from updated Docker container!');
 });
 
 app.listen(port, () => {
