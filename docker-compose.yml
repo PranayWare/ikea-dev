@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+
+  node:
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
+
