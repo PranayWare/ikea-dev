@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://pranayware:ARdjJAey6w2xaZ7X@pranay.knmpwoo.mongodb.net/myapi?retryWrites=true&w=majority&appName=pranay
+      - JWT_SECRET=your_jwt_secret
